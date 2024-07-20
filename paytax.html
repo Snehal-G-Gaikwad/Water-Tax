@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Tax - paytax</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 30px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 20px 0;
+        }
+        
+        .row {
+            margin-bottom: 20px;
+        }
+        
+        .col-6 {
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+        .col-12 {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        
+        strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        span {
+            display: block;
+            padding: 8px 12px;
+            border: none;
+            color: #333;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background: #0056b3;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #777;
+        }
+        
+    </style>
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+
+            document.getElementById('owner_name').innerText = urlParams.get('owner_name');
+            document.getElementById('mobile_no').innerText = urlParams.get('mobile_no');
+            document.getElementById('tax_amt').innerText = urlParams.get('tax_amt');
+            document.getElementById('date').innerText = urlParams.get('date');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2> Water Tax Data </h2>
+        <hr/>
+        <div class="row">
+            <div class="col-6">
+                <strong>Owner Name(घर मालकाचे नाव):</strong> <span id="owner_name"></span>
+            </div>
+            <div class="col-6">
+                <strong>Mobile No(मोबाईल क्रमांक):</strong> <span id="mobile_no"></span>
+            </div>
+            <div class="col-6">
+                <strong>Tax Amount(टॅक्स रुपये ):</strong> <span id="tax_amt"></span>
+            </div>
+            <div class="col-6">
+                <strong>Date(दिनांक):</strong> <span id="date"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button onclick="payNow()">Pay Now</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Digispect Technology-2024.</p>
+    </footer>
+    <script>
+        function payNow() {
+            alert('Payment functionality to be implemented.');
+            // Here, you can
+        }
+    </script>
+</body>
+</html>
